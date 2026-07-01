@@ -1,0 +1,25 @@
+name: Build and Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: codeberg-small
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Zig
+        run: |
+          ZIG_VERSION=0.16.0
+          curl -L "https://ziglang.org/download/${ZIG_VERSION}/zig-x86_64-linux-${ZIG_VERSION}.tar.xz" | tar -xJ
+          echo "$PWD/zig-x86_64-linux-${ZIG_VERSION}" >> $GITHUB_PATH
+
+      - name: Run tests
+        run: zig build test
+
+      - name: Check formatting
+        run: zig fmt --check .

@@ -1,0 +1,14 @@
+debug(zio): Spawning worker thread 1
+debug(zio): Spawning worker thread 2
+debug(zio): Spawning worker thread 3
+debug(zio): Spawning worker thread 4
+debug(zio): Spawning worker thread 5
+debug(zio): Spawning worker thread 6
+debug(zio): Spawning worker thread 7
+debug(zio): Waiting for worker thread 1
+debug(zio): Waiting for worker thread 2
+debug(zio): Waiting for worker thread 3
+debug(zio): Waiting for worker thread 4
+debug(zio): Waiting for worker thread 5
+debug(zio): Waiting for worker thread 6
+debug(zio): Waiting for worker thread 7
